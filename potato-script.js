@@ -13,7 +13,7 @@ function syncButtonLabel() {
 }
 
 btn.addEventListener('click', () => {
-    const current = getCurrentTheme;
+    const current = getCurrentTheme();
     const next = current === 'dark' ? 'light' : 'dark';
     html.setAttribute('data-theme', next);
     syncButtonLabel();
