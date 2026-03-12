@@ -1,0 +1,87 @@
+
+@font-face {
+  font-family: "atkinson-variable";
+  src: url("assets/atkinson-variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+
+:root {
+  --bg: #E6D7BF;
+  --text: #2c2127;
+  --accent: #3797D2; 
+  --border: #2c2127;
+}
+
+[data-theme="dark"] {
+  --bg: #2c2127;
+  --text: #E6D7BF;
+  --accent: #3797D2;
+  --border: #E6D7BF;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wwweggies{
+min-width: 120px;
+
+}
+
+body{
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 20px 10px 30px 10px;
+  font-family: atkinson-variable, sans-serif;
+  font-style: normal;
+}
+
+/*uses system prefs only when the user hasn't chosen the theme yet*/
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #2c2127;
+    --text: #E6D7BF;
+  }
+}
+
+h1, h2, p, li{
+    font-size: clamp(0.8rem, 5vw, 15rem); 
+}
+
+
+#potato{
+    /*border: solid 2px red;*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    width: min(100%, 50rem);
+    max-width: 50rem;
+    min-height: 30vh;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.potato-poetics li {
+  display: inline-block;
+}
+
+.potato-leaves li {
+  display: inline-block;
+}
+
+button.mode {
+    border: 1px solid var(--border);
+    background-color: var(--text);
+    color: var(--bg);
+    border-radius: 58% 42% 63% 37% / 44% 61% 39% 56%; 
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+}
