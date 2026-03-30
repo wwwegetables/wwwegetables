@@ -6,20 +6,21 @@
   font-weight: 100;
 }
 
+
 :root {
-  --bg: #E6D7BF;
+   --bg: #E6D7BF;
   --text: #2c2127;
   --accent: #3797D2; 
   --border: #2c2127;
+  --fontsize: 46px;
 }
 
 [data-theme="dark"] {
-  --bg: #2c2127;
+ --bg: #2c2127;
   --text: #E6D7BF;
   --accent: #3797D2;
   --border: #E6D7BF;
 }
-
 /*uses system prefs only when the user hasn't chosen the theme yet*/
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
@@ -37,6 +38,7 @@
 min-width: 150px;
 
 }
+
 
 body{
   background-color: var(--bg);
@@ -78,24 +80,32 @@ ul{
     list-style-type: none;
 }
 
-#potato{
+.potato-container{
     /*border: solid 2px red;*/
     display: flex;
-    flex-direction: column;
+    margin: 20% auto;
+    justify-content: center;
+    align-content: center;
     text-align: center;
-    gap: 1rem;
-    width: min(100%, 50rem);
+    width: 800px;
+    height: 500px;
+    position: relative;
     max-width: 50rem;
     min-height: 30vh;
     place-self: center;
+    font-size:var(--fontsize);
 }
 
-.potato-poetics li {
-  display: inline-block;
+
+.flower, .leaf, .stem, .tuber, .poem1, .poem2, .poem3{
+  color: rgb(68, 34, 34);
+  position: absolute;
+  display: flex;
+  align-items: center;
 }
 
-.potato-leaves li {
-  display: inline-block;
+.word{
+  position: absolute;
 }
 
 button.mode {
@@ -152,7 +162,6 @@ button.mode:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 }
 
-/* hide noise in dark mode */
 html[data-theme="dark"] .greening-spots::before {
   opacity: 0;
 }
@@ -167,3 +176,23 @@ html[data-theme="dark"] .greening-spots::before {
         transform: scale(1);
     }
 }
+
+#frame{
+  border: 1px black solid;
+  position: absolute;
+  display: flex;
+  left: -300px;
+  bottom: 0;
+  width: 400px;
+  height: 300px;
+  z-index: 9;
+  background-color: #3797D2;
+}
+
+
+#framebody{
+  background-color: #3797D2;
+  cursor: move;
+  z-index: 10;
+}
+
