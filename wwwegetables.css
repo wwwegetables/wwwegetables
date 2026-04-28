@@ -24,15 +24,13 @@
   font-weight: 100;
 }
 
-body{
-    height: 4000px;
-}
 .introduction{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin: 220px auto;
+    text-align: center;
 }
 
 .introduction > p{
@@ -40,20 +38,13 @@ body{
     font-family: var(--mono);
     color: var(--gggreen);
 }
-
+/*figure out how to import as svg/selectable*/
 img{
     max-width: 700px;
-    magin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-button{
-    padding: 10px 35px;
-    border: var(--gggreen) solid 1px;
-    background-color: rgba(226, 226, 226, 0);
-    font-family: var(--mechanik);
-    font-size: 1rem;
-    border-radius: 5px;
-}
+
 a{
     text-decoration: none;
     color: var(--gggreen);
@@ -61,5 +52,34 @@ a{
 
 .dig-in{
     position: fixed;
-    margin-top: 120vh;
+    left: 50%;
+    top: calc(100vh - 5rem);
+    transform: translateX(-50%);
+    margin-top: 0;
+    padding: 10px 35px;
+    border: var(--gggreen) solid 1px;
+    background-color: rgba(226, 226, 226, 0);
+    font-family: var(--mechanik);
+    font-size: 1rem;
+    border-radius: 5px;
+    border-style: dotted;
+    z-index: 999;
+    animation: slug 600s linear forwards;
+    white-space: nowrap;
 }
+
+.dig-in:hover{
+    animation: sway 6s infinite ease-in-out;
+}
+
+@keyframes slug {
+    0% { transform: translateX(-50%) translateX(0); }
+    100% { transform: translateX(-50%) translateX(120vw); }
+}
+
+@keyframes sway {
+    0%,
+    100% { transform: translateX(-50%) translateX(0); }
+    50% { transform: translateX(-50%) translateX(4px); }
+}
+
