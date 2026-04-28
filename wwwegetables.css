@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --wwwhite: rgb(226, 226, 226);
+    --gggreen: #1f7521;
+    --mono: maple-reg, 'Courier New', Courier, monospace;
+    --mechanik: mechanik-reg, san-serif;
+}
+
+@font-face {
+  font-family: "maple-reg";
+  src: url("assets/maple-reg.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "mechanik-reg";
+  src: url("assets/mechanik-reg.otf") format("OpenType");
+  font-style: normal;
+  font-weight: 100;
+}
+
+body{
+    height: 4000px;
+}
+.introduction{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 220px auto;
+}
+
+.introduction > p{
+    font-size: 1.3rem;
+    font-family: var(--mono);
+    color: var(--gggreen);
+}
+
+img{
+    max-width: 700px;
+    magin-bottom: 20px;
+}
+
+button{
+    padding: 10px 35px;
+    border: var(--gggreen) solid 1px;
+    background-color: rgba(226, 226, 226, 0);
+    font-family: var(--mechanik);
+    font-size: 1rem;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+    color: var(--gggreen);
+}
+
+.dig-in{
+    position: fixed;
+    margin-top: 120vh;
+}
