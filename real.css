@@ -29,13 +29,29 @@ body{
     background-color: rgb(47, 35, 35);
 }
 
+.flowerpot{
+    margin: 40% auto;
+    display: flex;
+    justify-content: center;
+}
+
 .ascii-art{
     font-family: var(--mono);
     white-space: pre;
     color: rgb(241, 128, 243);
-    transform: translateX(50%) translateY(50%);
+    position: relative;
+    
 }
-
+#msg{
+    text-align: center;
+    align-self: center;
+    display: block; 
+    width: 16ch;
+    white-space: normal;
+    align-items: baseline;
+    line-height: 2rem;
+    margin: -10px 0;
+}
 
 
 
