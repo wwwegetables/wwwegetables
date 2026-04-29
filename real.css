@@ -30,7 +30,7 @@ body{
 }
 
 .flowerpot{
-    margin: 40% auto;
+    margin: 200px auto 0 auto;
     display: flex;
     justify-content: center;
 }
